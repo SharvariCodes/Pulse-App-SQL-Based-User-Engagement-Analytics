@@ -1,108 +1,62 @@
-# Pulse-App-SQL-Based-User-Engagement-Analytics
-This project simulates a product analytics use case for a consumer application, where SQL is used to analyze user engagement, retention, and growth trends. Using a relational dataset of users and login sessions, I answer real business questions such as identifying inactive users, measuring quarter-over-quarter growth, detecting power users, and validating data completeness. All insights are generated using pure SQL, demonstrating strong analytical thinking and job-ready querying skills.
+# Pulse-App-User-Engagement-Analysis-with-SQL
+This project analyzes **user engagement and activity data for a simulated consumer app** using **pure SQL**. It involves designing relational tables, populating realistic login data, and answering **product and growth questions** related to retention, engagement, and user behavior. Advanced SQL queries are used to extract actionable insights, closely mirroring real-world **product analytics workflows**. 🚀
 
-# 🔍 Project Overview
+# 📊 Pulse App — SQL User Engagement Analytics
 
-Pulse is a hypothetical consumer application designed to track user engagement and session behavior.
-This project simulates the role of a Data Analyst working with Pulse’s internal database to answer critical product and growth questions using pure SQL.
+## 📝 Overview
+This project represents an internal **product analytics assignment for a consumer application**, where SQL is used to analyze **user activity, engagement trends, and retention patterns**. Using relational tables containing user and login session data, the project answers key business questions such as identifying **inactive users**, measuring **quarter-over-quarter growth**, detecting **power users**, and validating **data completeness** — all using **pure SQL**.
 
-The goal is to:
+## 🔍 Steps Involved
 
-Monitor user activity
-Identify inactive users
-Measure growth trends
-Detect engagement patterns
-Support product decisions with data
-All analysis is performed exclusively in SQL, reflecting real-world analytics workflows.
+### 1️⃣ Data Modeling & Table Creation
+- 🗄️ Designed relational tables to represent application users and their login sessions.
+- 🧱 Created tables using **DDL** with primary and foreign key relationships.
+- 📊 Modeled data to support time-based and user-level analysis.
 
-🛠️ Tech Stack
+### 2️⃣ Data Population (DML)
+- ✍️ Inserted realistic and historical login data using **DML operations**.
+- ⚠️ Included edge cases such as inactive users, gaps in activity, and varying engagement levels.
+- 🎯 Prepared the dataset to closely resemble real app usage behavior.
 
-Language: SQL
-Analysis Type: Product & User Analytics
-Focus Areas:
-User engagement
-Retention & inactivity
-Session growth
-Power user identification
+### 3️⃣ User Activity & Retention Analysis
+- 🔍 Identified users who have **not logged in within the last 5 months** to flag churn risk.
+- 🔄 Compared user activity across different time periods to detect returning and dormant users.
 
-Data completeness checks
+### 4️⃣ Engagement & Growth Trends
+- 📈 Calculated **quarterly user and session metrics** to track product adoption.
+- 📊 Measured **quarter-over-quarter percentage growth in sessions** to assess engagement trends.
+- 🧠 Used window functions to compare performance across time.
 
-🧱 Data Model
-👤 Users
+### 5️⃣ Power User Identification
+- 🏆 Identified users with the **highest session engagement scores per day**.
+- ⚡ Detected **power users** who logged in every single day since their first login.
+- 🧮 Applied ranking and date-difference logic to evaluate consistency and engagement.
 
-Stores user-level information for the Pulse app.
+### 6️⃣ Data Quality & Completeness Checks
+- 🕵️‍♀️ Identified **dates with zero login activity**, which may indicate outages or tracking issues.
+- 🔁 Used **recursive CTEs** to generate continuous date ranges and validate data coverage.
 
-user_id
+## 📂 Dataset Overview
+- **Users Table:** user_id, user_name, user_status (Active / Inactive)
+- **Logins Table:** user_id, login_timestamp, session_id, session_score
 
-user_name
+## 🛠️ Tools & Technologies Used
+- **SQL** 🗄️: Data modeling, transformation, and analysis
+- **CTEs & Subqueries** 🧠: Query structuring and readability
+- **Window Functions** 📊: Ranking and time-based comparisons
+- **Recursive CTEs** 🔁: Date sequence generation and gap detection
 
-user_status (Active / Inactive)
+## 🎓 Key Learnings
+- 🧠 Translating **product and business questions** into SQL queries
+- 📊 Analyzing user engagement, retention, and growth using relational data
+- 🪜 Writing **interview-level SQL** involving window functions and recursive logic
+- ⚠️ Handling edge cases and validating data completeness
 
-🔐 Logins
+## 🚀 Future Improvements
+- 📈 Add retention cohorts and DAU/MAU metrics
+- 📊 Build dashboards using Power BI or Tableau
+- 🧠 Generate product recommendations based on engagement patterns
+- 🔎 Expand analysis to include session duration and feature-level usage
 
-Tracks every login session on the platform.
-
-user_id
-
-login_timestamp
-
-session_id
-
-session_score (engagement indicator)
-
-📈 Business Questions Answered
-1️⃣ Which users are at risk of churn?
-
-Business Context:
-Product managers want to identify users who have not logged in within the last 5 months.
-
-SQL Concepts Used:
-CTEs, date filtering, aggregations
-
-2️⃣ How is user engagement trending quarter over quarter?
-
-Business Context:
-Track the number of users and sessions each quarter to evaluate product adoption.
-
-SQL Concepts Used:
-Time-based aggregation, grouping, DATEPART()
-
-3️⃣ Which users returned after being inactive?
-
-Business Context:
-Identify users active in January 2026 but absent in November 2025.
-
-SQL Concepts Used:
-Set comparison, CTEs, date filters
-
-4️⃣ Is user activity growing or declining?
-
-Business Context:
-Calculate quarter-over-quarter percentage growth in sessions.
-
-SQL Concepts Used:
-Window functions (LAG()), growth calculations
-
-5️⃣ Who are our most engaged users?
-
-Business Context:
-Identify the top-performing user per day based on session engagement scores.
-
-SQL Concepts Used:
-Window functions, ranking, daily aggregation
-
-6️⃣ Who are our power users?
-
-Business Context:
-Detect users who have logged in every single day since signup.
-
-SQL Concepts Used:
-Date difference logic, distinct counts
-
-7️⃣ Are there data gaps affecting reporting?
-
-Business Context:
-Identify dates where no users logged in, which may indicate outages or tracking issues.
-
-SQL Concepts Used:
-Recursive CTEs, date series generation
+## ✅ Conclusion
+This project demonstrates how **pure SQL** can be used to support **product, growth, and engagement analysis** for a consumer application. It mirrors the type of analytical work performed by **Data Analysts and Product Analysts** in real-world product-based companies, emphasizing strong SQL fundamentals and business-driven thinking.
