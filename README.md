@@ -1,40 +1,28 @@
 # Pulse-App-SQL-Based-User-Engagement-Analytics
 This project simulates a product analytics use case for a consumer application, where SQL is used to analyze user engagement, retention, and growth trends. Using a relational dataset of users and login sessions, I answer real business questions such as identifying inactive users, measuring quarter-over-quarter growth, detecting power users, and validating data completeness. All insights are generated using pure SQL, demonstrating strong analytical thinking and job-ready querying skills.
 
-🔍 Project Overview
+# 🔍 Project Overview
 
 Pulse is a hypothetical consumer application designed to track user engagement and session behavior.
-
 This project simulates the role of a Data Analyst working with Pulse’s internal database to answer critical product and growth questions using pure SQL.
 
 The goal is to:
 
 Monitor user activity
-
 Identify inactive users
-
 Measure growth trends
-
 Detect engagement patterns
-
 Support product decisions with data
-
 All analysis is performed exclusively in SQL, reflecting real-world analytics workflows.
 
 🛠️ Tech Stack
 
 Language: SQL
-
 Analysis Type: Product & User Analytics
-
 Focus Areas:
-
 User engagement
-
 Retention & inactivity
-
 Session growth
-
 Power user identification
 
 Data completeness checks
